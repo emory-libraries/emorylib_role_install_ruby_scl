@@ -20,6 +20,15 @@
     src: gemrc
     dest: ~/.gemrc
 
-- name: Install/Update Base Ruby Gems
-  shell: >
-   gem install rails;
+#- name: Install/Update Base Ruby Gems
+#  shell: >
+#   gem install rails;
+
+- name: Gem install rails
+  gem:
+    name: rails
+
+- name: Install 1.X Bundler
+  gem:
+    name: bundler
+    version: "<2.0"
